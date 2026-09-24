@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e8edea;
+  --foreground: #17201c;
+
+  --surface: #e8edea;
+  --surface-elevated: #eef2ef;
+
+  --primary: #15966f;
+  --primary-foreground: #ffffff;
+
+  --success: #23845f;
+  --success-foreground: #ffffff;
+
+  --danger: #c7545f;
+  --danger-foreground: #ffffff;
+
+  --warning: #b8792f;
+  --warning-foreground: #ffffff;
+
+  --info: #4c7fa8;
+  --info-foreground: #ffffff;
+
+  --muted: #65716b;
+  --border: #d2dbd6;
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+.dark {
+  --background: #0d1512;
+  --foreground: #e9f1ed;
+
+  --surface: #131e19;
+  --surface-elevated: #18251f;
+
+  --primary: #32b98b;
+  --primary-foreground: #07130e;
+
+  --success: #45c895;
+  --success-foreground: #07130e;
+
+  --danger: #e87881;
+  --danger-foreground: #1a090b;
+
+  --warning: #e0a451;
+  --warning-foreground: #1a1005;
+
+  --info: #79a9d1;
+  --info-foreground: #08131d;
+
+  --muted: #9ba9a2;
+  --border: #293831;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
